@@ -1,0 +1,4 @@
+Flask==2.2.1
+Flask_SocketIO==5.3.2
+gensim==4.3.0
+spacy==3.5.0

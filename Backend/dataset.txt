@@ -1,0 +1,46 @@
+data ={
+    "questions": [
+      "What is the Internet?",
+      "What is technology?",
+      "What is the history of the Internet?",
+      "How does the Internet work?",
+      "What are some of the latest advancements in technology?",
+      "What is computational programming?",
+      "What are some popular programming languages?",
+      "What is the purpose of programming?",
+      "What are the steps involved in the programming process?",
+      "What is the protein folding problem?",
+      "What are some possible solutions to the protein folding problem?",
+      "Tell me about blockchain technology",
+      "Rust programming language",
+      "C++ programming language",
+      "more on deep learning",
+      "Flutter framework",
+    ],
+   
+  }
+
+salutations = [
+              "hello",
+              "hi",   
+              "yoo", 
+              "hey",    
+              "good morning",    
+              "good evening", 
+              "good afternoon"]
+
+salutation_feedback = [    
+  "Hello! What can I help you with?",    
+  "Hi! What would you like to know?",    
+  "Hey! How can I assist you today?",    
+  "Good morning/afternoon/evening! What can I help you with?",    
+  "Greetings! Is there something specific you would like to know?"]
+
+salutations1 = ["bye", "goodbye", "good bye","see you later"]
+
+
+
+
+
+
+
