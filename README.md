@@ -4,7 +4,7 @@ _still in active development_
 ### 1.0 Dev names
      1.Armstrong Nyagwencha
      2.Fakii Mohammed
-     3.Linn Konye
+     3.Vincent
      4.Precious
      5.Yorke Nyakundi
 
