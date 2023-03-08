@@ -91,10 +91,10 @@ class ChatController extends GetxController {
 
   List hotWords = [
     "Why a chatbot",
-    "Predict for 2 years",
+    "Show progress",
     "commands",
+    "Predict for 2 years",
     "Data columns",
-    "Hello",
     "Data shape",
   ];
 }

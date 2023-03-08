@@ -100,7 +100,7 @@ class _ChatPageState extends State<ChatPage> {
                                         animatedTexts: [
                                           // "Hi! I'm a chatbot for the child protection management system. I can help you report and track cases, answer basic questions and guide you through the process. Let's work together to keep children safe!"
                                           TyperAnimatedText(
-                                              "Hi! I'm a chatbot, still in active development.I can give you a clear picture of trends related to consumption of malaria commodities and make limitied prediction.")
+                                              "Hi! I'm a chatbot, still in active development.I can give you a clear picture of trends related to consumption of malaria commodities,dissect the dataset and make limitied prediction.")
                                         ],
                                       ),
                                     ),
