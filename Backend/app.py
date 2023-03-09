@@ -1,8 +1,8 @@
 import random
 from flask import Flask,request
 from flask_socketio import SocketIO,emit,send
-from model import load_dataset, process
-from dataset import salutations, salutation_feedback,salutations1, salutation_feedback1,malaria_commands
+from chatbot.model import load_dataset, process
+from chatbot.dataset import salutations, salutation_feedback,salutations1, salutation_feedback1,malaria_commands
 from decode import data,predict,total,allocation
 
 

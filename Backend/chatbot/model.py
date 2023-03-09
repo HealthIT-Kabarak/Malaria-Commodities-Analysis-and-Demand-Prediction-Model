@@ -9,7 +9,7 @@ Created on Sun Feb 12 12:21:53 2023
 import gensim
 from gensim import corpora
 from process import preprocess
-from dataset import data,unknown_query_responses
+from chatbot.dataset import data,unknown_query_responses
 import random
 
 
