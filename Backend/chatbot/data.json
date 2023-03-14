@@ -1,0 +1,856 @@
+{
+    "intents": [{
+            "tag": "greeting",
+            "patterns": [
+                "Hi",
+                "Hey",
+                "Is anyone there?",
+                "Hello",
+                "Hay",
+                "Sasa",
+                "Good Evening",
+                "Good afternoon"
+            ],
+            "responses": [
+                "Hello, how can i help you today?",
+                "Hi, how can i help you today?",
+                "Hi, there how can i help you today?"
+            ]
+        },
+        {
+            "tag": "goodbye",
+            "patterns": [
+                "Bye",
+                "See you later",
+                "Goodbye"
+            ],
+            "responses": [
+                "See you later",
+                "Have a nice day",
+                "Bye! Come back again"
+            ]
+        },
+        {
+            "tag": "thanks",
+            "patterns": [
+                "Thanks",
+                "Thank you",
+                "That's helpful",
+                "Thanks for the help"
+            ],
+            "responses": [
+                "Happy to help!",
+                "Any time!",
+                "My pleasure",
+                "You're most welcome!"
+            ]
+        },
+        {
+            "tag": "about",
+            "patterns": [
+                "Who are you?",
+                "What are you?",
+                "Who you are?"
+            ],
+            "responses": [
+                "I'm a CIMPS virtual assistant.",
+                "I'm CIMPS chatbot."
+            ]
+        },
+        {
+            "tag": "help",
+            "patterns": [
+                "Could you help me?",
+                "give me a hand please",
+                "Can you help?",
+                "I need a support",
+                "I need a help",
+                "support me please"
+            ],
+            "responses": [
+                "Tell me how can I assist you",
+                "Tell me your problem to assist you",
+                "Yes Sure, How can I support you"
+            ]
+        },
+        {
+            "tag": "ActivateDeactivate-account",
+            "patterns": ["how to deactivate an account",
+                "my account is deactivated",
+                "Can not activate my account",
+                "having problens with my account activation",
+                "How to activate an account"
+            ],
+            "responses": ["County coordinators can change password, deactivate and activate accounts for the workforce members under them.\n On Dashboard -> Workforce members > Details (Activate, Deactivate, Change Password Buttons at bottom)"]
+        },
+        {
+            "tag": "passwords",
+            "patterns": [
+                "How can i reset my password",
+                "cant remember my logins",
+                "i lost my login credentials",
+                "I did not save my logins and I lost them ",
+                "what do I do when I cant remember my logins or password",
+                "can I recover my password",
+                "How do I change my password",
+                "I forgot my password",
+                "can not remember my password",
+                "Forgot password kindly assist",
+                "My password is  locked and kindly request that it be reset.  Thank you",
+                "I have not been able to have my password reset. Kindly facilitate",
+                "Please reset ",
+                "My account requested for account password reset",
+                "Kindly reset the password",
+                "What should I do coz I can't remember old password",
+                "I have not received a notification on password change",
+                "How can I do a self reset of my password"
+            ],
+            "responses": [
+                "County coordinators can change password, deactivate and activate accounts for the workforce members under them.\n On Dashboard -> Workforce members > Details (Activate, Deactivate, Change Password Buttons at bottom)",
+                "Use the forgot password functionality to reset your password.",
+                "Use the forgot password functionality with your email  to reset your account.",
+                "The CPIMS reset password reset link is located on the login page just after the submit button or you can click on\n this link: https://childprotection.go.ke/accounts/password/reset/",
+                "kindly take note that you can be able to reset your passwords using the functionality highlighted above and follow the instructions given thereafter. however for those who have not used the system for over three months or those who can remember the email used when creating the account can contact their supervisors or the admni."
+            ]
+        },
+        {
+            "tag": "payments",
+            "patterns": [
+                "When will we be paid",
+                "Why is our payment delayed",
+                "we have not been paid"
+            ],
+            "responses": [
+                "am following your payment be assured you will paid soonest possible. ",
+                "Iam sorry for the delay its not intentional do understand",
+                "We are following up on payments. Will give you updates incase you will not have been paid. My sincere apologies for inconveniences caused. Blessed day"
+            ]
+        },
+        {
+            "tag": "photos",
+            "patterns": [
+                "Where can i access the photos",
+                "Where is the link to the images"
+            ],
+            "responses": [
+                "kindly click on this link to view and download the photos.",
+                "Iam sorry for the delay its not intentional do understand"
+            ]
+        },
+        {
+            "tag": "creator",
+            "patterns": [
+                "Who created you?",
+                "When was you created?",
+                "Who was your creator?",
+                "WHo devloped you?",
+                "who were your developers",
+                "when were you created?"
+            ],
+            "responses": [
+                "I was created by 2 students from Kabarak University during a hackathon in February 2023 as an alternative to an inferior bot. I am a product of their innovation and dedication to providing the best possible service to users.",
+                "I was created by Kabarak University developers during a hackathon in February 2023. My purpose is to serve as an alternative to another chatbot, and to provide users with enhanced features and functionality.",
+                "I was created by developers at Kabarak University during a February 2023 hackathon. The aim was to provide a solution for child protection managers to improve their work in safeguarding children."
+            ]
+        },
+        {
+            "tag": "sheets",
+            "patterns": [
+                "How can i fill the sheets",
+                "Help me with the instructions to fill the sheets"
+            ],
+            "responses": [
+                "Type place of service,then click add service."
+            ]
+        },
+        {
+            "tag": "livestream",
+            "patterns": [
+                "when can i join the livestream",
+                "How cam i join the livetream",
+                "When will the live stream be available to me",
+                "How can i access livestream services"
+            ],
+            "responses": [
+                "Once you hit the target of the tests we agreed on the SCCO will register you on live."
+            ]
+        },
+        {
+            "tag": "createaccount",
+            "patterns": [
+                "I need to create a new account",
+                "how to open a new account",
+                "I want to create an account",
+                "can you create an account for me",
+                "how to open a new account"
+            ],
+            "responses": [
+                "You can just easily create a new account from CIMPS web site",
+                "Just go to CIMPS web site and follow the guidelines to create a new account"
+            ]
+        },
+        {
+            "tag": "complaint",
+            "patterns": [
+                "have a complain",
+                "I want to raise a complain",
+                "there is a complain about a service"
+            ],
+            "responses": [
+                "Please provide us your complaint in order to assist you",
+                "Please mention your complaint, we will reach you and sorry for any inconvenience caused"
+            ]
+        },
+        {
+            "tag": "login",
+            "patterns": [
+                "Unable to login",
+                "Having login issues",
+                "can not login to my account",
+                "The login page is not loading",
+                "The login page is not appearing",
+                "unable to load the system",
+                "The System is too slow",
+                "site not available",
+                "Cannt find the systems website"
+            ],
+            "responses": [
+                "Please check if you are using the right URL. it should be: http://cpims.cwelfare.com/",
+                "Please try logging in from another machine. You can also use your phone.",
+                "Please confirm that your internet connection is active and/or\n try to logging in from another computer."
+            ]
+        },
+        {
+            "tag": "delete",
+            "patterns": [
+                "How to delete a child recorded more than once",
+                "How to delete duplicates"
+            ],
+            "responses": [
+                "When it comes to deletion of cases,you will have to search for that child and edit the details.\n There in at the bottom, you will find two options,click on 'duplicate or never existed',then you update records after recording your name."
+            ]
+        },
+        {
+            "tag": "SiblingsInfomation",
+            "patterns": [
+                "How do I enter infomations for siblings",
+                "parent nigletted more than one child",
+                "children are related"
+            ],
+            "responses": [
+                "Have case record sheets for each but remember to include their names in the main child's record sheet.\n Pin the sheets together to make one file."
+            ]
+        },
+        {
+            "tag": "DataEntry",
+            "patterns": [
+                "Which platform are we submitting data",
+                "Is excel still working in submitting data",
+                " I need help to key in a child and the date paper form filled is not active",
+                "How do i find the caseloads  as entered in CPIMS for the period ",
+                " How can I fix the issue of entering the wrong type of data/information",
+                "Is it possible to enter all our cases into the system",
+                "Please help me understand the connection between the entries and the totals",
+                "Who are the perpetrators in the updated system",
+                "Some cases that have been recorded have not reflected in the system",
+                "Do we still fill tool A"
+            ],
+            "responses": [
+                "We are in the process of de-commissioning Excel tool A so we need to prioritize live data entry"
+            ]
+        },
+        {
+            "tag": "UpdateDetails",
+            "patterns": [
+                "How do I update my details",
+                "how can I change my profile",
+                "I want to change my personal details",
+                "steps to change my profile details",
+                "How can I change my details",
+                "Is excel still working in submitting data"
+            ],
+            "responses": [
+                "Please follow the following steps \n i)Edit your ORGANIZATIONS details: contact details, office email (not personal) and Names of officer in Charge\nii) Update the PERSONS details (email, phone number, etc)"
+            ]
+        },
+        {
+            "tag": "notAbleToReset_Password",
+            "patterns": ["I cant reset my password",
+                "my reset email has not arrived",
+                "Reset password not working"
+            ],
+            "responses": ["Those who can not reset their passwords it means they have not logged in to CPIMS in the last 90 days (3 months). \nI hope the SI data I have just submitted to other Government agencies was correct given these scenario of no use in last 90 days."]
+
+        },
+        {
+            "tag": "systemAcess",
+            "patterns": [
+                "I cannot excess the system what's the problem",
+                " Why are users still being locked out of CPIMS?",
+                "I'm not able to access CPIMS. Any help.",
+                "the trainers are not able to access the  the live system using their user names and password given during the training.",
+                "am trying to connect with cpims in vain. Any problem?"
+            ],
+            "responses": [
+                "Check your internet, cpims is working",
+                "Admins are working on that"
+            ]
+        },
+        {
+            "tag": "Population",
+            "patterns": [
+                "How can access the population of the children",
+                "What is our population",
+                "Is the population for both boys and girls",
+                "The population (girls/boys) is still reading 0/0.."
+            ],
+            "responses": [
+                "The excel tool will automatically calculate the population of your institution",
+                "Yes, there is no breakdown of population in terms of gender",
+                "the value of population will keep changing as you enter the admissions and exits.",
+                "The population reads 0 because you were not doing Institution placement after doing CRS."
+            ]
+        },
+        {
+            "tag": "Admission",
+            "patterns": [
+                "What can I do when we stay with children for months without receiving their admissions",
+                "population in the admission column can capture or neither can they report nil for those months."
+            ],
+            "responses": [
+                "For any month where there were zero admissions or exits, please indicate 0"
+            ]
+        },
+        {
+            "tag": "DataSubmission",
+            "patterns": [
+                "What can I do when we stay with children for months without receiving their admissions",
+                "children admision not received"
+            ],
+            "responses": [
+                "please alias with the supervisors"
+            ]
+        },
+        {
+            "tag": "Admission",
+            "patterns": [
+                "will we then be submitting monthly/quarterly or annually?"
+            ],
+            "responses": [
+                "It will be needless since the guys at Headquarters can filter that at their end anytime they need that data."
+            ]
+        },
+        {
+            "tag": "SelfDischarge",
+            "patterns": ["is there self discharge",
+                "what is self discharge"
+            ],
+            "responses": ["Self-discharge not right"]
+
+        },
+        {
+            "tag": "Escapeofchildren",
+            "patterns": [
+                "children do escape will you capture them as exit?",
+                "where will children who escaped be classifield",
+                "what is excape part of",
+                "is escape exit or discharge",
+                "is escape exit",
+                "is escape discharge"
+            ],
+            "responses": [
+                "That is exit Because they have left in an illegal way",
+                "Escape is exit-no longer in the institution.",
+                "When escape the child is presumed to have been exited on adverse events but \n the case here is when you fill the child still remains active",
+                "For resident children in an institution who are Abducted or Escaped, makes them Inactive/Exit"
+            ]
+        },
+        {
+            "tag": "ArrestedChildren",
+            "patterns": [
+                "what about a child who has been taken by police to court",
+                "What can I do when a child is arrested",
+                "can a child is arrested for more than five days be declared as an exit",
+                "arrested",
+                "child in prison",
+                "child is imprisoned"
+            ],
+            "responses": [
+                "If a child is arrested, he/she must be taken to a childern detention center within 24 hours",
+                "A child is not considered as an exit"
+            ]
+        },
+        {
+            "tag": "Recordassess",
+            "patterns": [
+                "Please advise I am stuck and can't proceed to fill the case record sheet coz there's is no values"
+            ],
+            "responses": [
+                "Tell the person who created you to at least attach you to the sub county where the institution is situated. This has to be done in registry then in roles."
+            ]
+        },
+        {
+            "tag": "Childreninremand",
+            "patterns": [
+                "At what conditions will the child remain in a remand",
+                "What happens when child is remanded",
+                "Can children under the age of 18 be remanded"
+            ],
+            "responses": [
+                "they are committed according to their ages and at 18 they are released unless the institution requests the court",
+                "The case might be different for every Remand home"
+            ]
+        },
+        {
+            "tag": "Registrationofstaff",
+            "patterns": [
+                "I wish to register new staff",
+                "register staff",
+                "I wish to register is a children Assistant 11."
+            ],
+            "responses": [
+                "Kindly forward email for institutions section to institution 2014@yahoo com",
+                "For registration of staff please contact the administrator"
+            ]
+        },
+        {
+            "tag": "ChallengesOfStaff",
+            "patterns": ["There is a challenge at the point of selecting the cadre of our staff ",
+                "staff cant select fields"
+            ],
+            "responses": ["Kindly forward email for institutions section to institution 2014@yahoo com"]
+
+        },
+        {
+            "tag": "ChildSearch",
+            "patterns": [
+                "How do I search for a child in the system",
+                "How do I find child details in the system",
+                "Please guide on how to search for a child"
+            ],
+            "responses": [
+                "To Search for a child just use the search bar appearing on all pages at the top put child name and click enter.",
+                "Placement search results to indcate the status (active, discharged, escaped or abducted)"
+            ]
+        },
+        {
+            "tag": "ChildTransfer",
+            "patterns": [
+                "What happens when you transfer children to another institutions",
+                "Can you transfer a child to other institutions",
+                "Am unable to transfer a girl from reception to rehab is it transfer in or re-admission",
+                "how do I know the transfer is successful",
+                "Can a child be transferred from a Remand directly to a Rehabilitation without passing through a reception center?"
+            ],
+            "responses": [
+                "When you transfer a child to another institution the users in the other SI will be notified.",
+                "For children transfer please contact the administrator",
+                "You will know a child has been transferred when doing institutional placement"
+            ]
+        },
+        {
+            "tag": "AddStaffTeacher",
+            "patterns": [
+                "when creating work force where do we place teachers",
+                "The system doesn't recognize teachers"
+            ],
+            "responses": [
+                "On person registry pleas add teacher on test site",
+                "You can add teachers as technical instructors"
+            ]
+        },
+        {
+            "tag": "ChildDischarge",
+            "patterns": [
+                "when I discharge some children from institution some disappear from pending cases",
+                "What type of discharge when the subject is committed to prison or remand",
+                "The system doesn't recognize teachers"
+            ],
+            "responses": [
+                "For a case to 'disappear from pending' as you put it, you must have provided at least one service by managing encounters.\n If you don't manage any encounter but you manage a service, referral or court session, it still remains pending. So, there is a great chance that in some cases you have not managed an encounter hence them remaining as pending.",
+                "It should be added as one of the options. It exists and children are always committed for short sharp sentences."
+            ]
+        },
+        {
+            "tag": "ChildReaddmission",
+            "patterns": [
+                "How do you admit child who had already escaped?",
+                "How do you readmit a child who escaped and captured",
+                "How do you readmit a child that has come in with a new case"
+            ],
+            "responses": [
+                "Fill a new case record sheet for him/her",
+                "Re-occuring cases allow admission but new CRS has to be created and old admission must be discharged."
+            ]
+        },
+        {
+            "tag": "ForeignChildRegistration",
+            "patterns": [
+                "What happens in registration of children from outside Kenya under the location part",
+                "the child is not a kenyan",
+                "nationality is not kenya",
+                "child from another country",
+                "country not kenya"
+            ],
+            "responses": [
+                "put the details where the child was found but under nationality please indicate the country of origin."
+            ]
+        },
+        {
+            "tag": "ChildOffendorList",
+            "patterns": [
+                "What is the list of child offenders",
+                "What is the list of existing sub categories under child offender;",
+                "Child offender crimes"
+            ],
+            "responses": [
+                "Indecent Assault (excludes defilement), Traffic Offence (Touting), Contempt of Court, Begging,\n Prostitution, Insulting, Lying/perjury, Breach of the Peace/Creating disturbance, Murder, Assault \nIntention to commit a felony, aiding a prisoner to escape, harboring."
+            ]
+        },
+        {
+            "tag": "AddmissionDelays",
+            "patterns": [
+                "I admitted children yesterday they are shown as pending in the dashboard. What did I do wrong",
+                "Can not see the child i created"
+            ],
+            "responses": [
+                "Sometimes there is a delay in the status upgrade. Please give it sometime"
+            ]
+        },
+        {
+            "tag": "ChildDischarge",
+            "patterns": [
+                "I admitted children yesterday they are shown as pending in the dashboard. What did I do wrong",
+                "What is the list of existing sub categories under child offender;",
+                "Child offender crimes"
+            ],
+            "responses": [
+                "It Sometimes there is a delay in the status upgrade. Please give it sometime"
+            ]
+        },
+        {
+            "tag": "ChildLeave",
+            "patterns": [
+                "I have cases of children whom were granted leave of absence now they are back and on institution placement",
+                "How should i register children who are back from leave"
+            ],
+            "responses": [
+                "Read it children from leave under Readmission relapse category",
+                "As a temporal solution we have added Readmission after temporal release\n but the permanent solution is during temporal release the system will reactivate the admission after expiry of the period specified which is work in progress."
+            ]
+        },
+        {
+            "tag": "PopulationUpdate",
+            "patterns": [
+                "found out that these children were deleted from the system instead of being discharged. I would like to know why?",
+                "The record in the website seems to have been deleted, please advise",
+                "Could you please assist, am following on a record and it says the record does not exist in the database"
+            ],
+            "responses": [
+                "This should be a mistake and it is highly regretful",
+                "we are doing a follow up, we will get back to you",
+                "Seems they were delated by mistake, so activating them will enable easy exit from exit"
+            ]
+        },
+        {
+            "tag": "ManageAdministrativetasks",
+            "patterns": [
+                "How can i generate a unique serial number for my region that will be different from other regions",
+                "kindly send the reporting tools for my region",
+                "How do I copy the formulas? ",
+                "Are we supposed to continue in the same workbook?",
+                " How should we send the excel tool A",
+                "We have noted that the majority of the offices submitted the monthly caseloads using the old version of Tool A."
+            ],
+            "responses": [
+                "Tool A should still be the same as it is continuous",
+                "For tool B the last worksheet is on dictionary (defining counties)",
+                "You should have separate tools for each sub county that you serve.",
+                "The reporting Tools are being worked on. We request that we continue populating the Tool A ",
+                "The new Tool A has a column for Date of Birth."
+            ]
+        },
+        {
+            "tag": "accountunlocking",
+            "patterns": [
+                "Please unlock my account",
+                "I cant access my account, plaese help me access it",
+                "how can access my locked account"
+            ],
+            "responses": [
+                "Contact the administrator to unlock your account",
+                "Seems you account has been deactivated, please visit our offices or contact the administrator"
+            ]
+        },
+        {
+            "tag": "CPMISaccess",
+            "patterns": [
+                "I'm not able to access CPIMS. Any help.",
+                " I have been having problems with CPIMS as far as logging is concerned"
+            ],
+            "responses": [
+                "Confirm if your internet is good",
+                " Restart your machine to check if thats the issue",
+                "confirm if your logins are correct"
+            ]
+        },
+        {
+            "tag": "systemerror",
+            "patterns": [
+                "Invalid literal for int() with base 10:'undefined",
+                " Still getting the same error message",
+                "The person in charge cannot view a child who was created by someone else under them or view a child see which Sub County they were created in",
+                "Hi, my computer has crashed.",
+                "can we get someone technician to check on our machine any referrals please",
+                "I'm trying to access CPIMS but I'm getting a 503 error Service Unavailable",
+                "Is the system currently working?"
+            ],
+            "responses": [
+                "Attempt creating a child and manage the cases",
+                "Please go to edit then attach the caregiver again.",
+                "Check the CPIMS registered caregiver does not create a new one. Then save and go back to the view button",
+                "Please contact the IT team"
+            ]
+        },
+        {
+            "tag": "addrescuecentre",
+            "patterns": [
+                "Can you add a rescue center from another region?",
+                " My rehabilitation center is not on the list"
+            ],
+            "responses": [
+                "Sorry, we can't add a rescue center that is not within our region"
+            ]
+        },
+        {
+            "tag": "personregistry",
+            "patterns": [
+                "I cant view a case referred to me that was recorded by someone else because names cannot confirm a child we might end up with many double registration",
+                "I still can't edit a case that was done by my predecessors so what do I do if it doesn't have all the information and I want to update",
+                "I am unable to register new child data. It's hanging. Your assistance please.",
+                "How can i view children so that we can tell if its the same child to avoid duplication"
+            ],
+            "responses": [
+                "The limitations on view have been removed. Please confirm if it is OK.",
+                "Please contact the administrator",
+                "Contact the administrator to give you permission"
+            ]
+        },
+        {
+            "tag": "missinginformation",
+            "patterns": [
+                "case history of the child and family background are missing as i generate a social inquiry",
+                " The system is also not generating a referral",
+                " We have cases of children aged -1 years and up to 41 years.",
+                "DoB earlier than date case reported.",
+                "Missing DOB/Invalid DOB",
+                "Age in appropriate cases",
+                "Gender incompatible cases",
+                "Missing intervention (pending cases)"
+            ],
+            "responses": [
+                "Please contact the administrator",
+                "We are all encouraged to enter all missing information for the last FY as soon as possible"
+            ]
+        },
+        {
+            "tag": "crimereport",
+            "patterns": [
+                "Where can I report crime alerts real time for realtime response from security agencies.",
+                "Which code should I use to log in the platform",
+                "How should i report a crime",
+                "Will my identity be anonymous to the security ",
+                "How much will the message cost"
+            ],
+            "responses": [
+                "You will report on a digital platform called mulika uhalifu and use a short code 22068.",
+                "The short code is 22068 and you can save this code under mulika uhalifu.",
+                "When you witness crime, quickly take your phone, go to messages, write the name of your region, then message, then your exact location, then send to the short code. Within seconds, you will receive a message informing you that your message will be relayed to authorities. All security agencies will receive your message and the ones nearest you respond to it within minutes. "
+            ]
+        },
+        {
+            "tag": "onlinetraining",
+            "patterns": [
+                "How can one be  Dcs officer",
+                "Will there be certificates of participation",
+                "I have no one to do the CPIMS, most of the managers have not been trained "
+            ],
+            "responses": [
+                "There is an offer for Dcs officers for online deinstitutionalisation training. If interested, notify by sending your full names, duty county and email address",
+                "certificates will be provided on completion.",
+                "Trainings have been going like the staff concerned with data are trained",
+                "They shall be trained as soon as we get the opportunity"
+            ]
+        },
+        {
+            "tag": "aligningcaseloads",
+            "patterns": [
+                "Why are there differences between the excel tool caseload reporting and the caseload in the CPIMS",
+                "Some sub counties have nil entries running to many months.",
+                "Does this data include case management or rather concluded cases or just entries in the system?",
+                "Which caseload should we return? "
+            ],
+            "responses": [
+                "Please let all the SCCO take this seriously and ensure that all last year's data is captured in the system even as we build this year's caseload in the system.",
+                "Please note that the caseload we have shared simply refers to cases created in to the system"
+            ]
+        },
+        {
+            "tag": "CPIMSstatusreport",
+            "patterns": [
+                "How can we clear the backlog within this quarter",
+                "The picture does not look good for a number of SCCO",
+                "Should we include offices with zero data in the report"
+            ],
+            "responses": [
+                "Lets put more effort into the excel tool ",
+                "Yes. The shaded cells indicate months with zero cases. We are all encouraged to work on our backlogs and ensure we are all up to date."
+            ]
+        },
+        {
+            "tag": "Emailaccess",
+            "patterns": [
+                "Forward the soft copy of the case record sheets.",
+                "i have not received the email",
+                "The email has not been fowarded to me"
+            ],
+            "responses": [
+                "Kindly recheck your email and confirm "
+            ]
+        },
+        {
+            "tag": "leavedays",
+            "patterns": [
+                "When will you proceed for leave.",
+                " when is our leave"
+            ],
+            "responses": [
+                "your leave is being processed you will be updated once done"
+            ]
+        },
+        {
+            "tag": "systemfunctions",
+            "patterns": [
+                "How can i search for a child in this updated system",
+                "How can i find the history of a child",
+                "How can i print the record and institution details of a child",
+                " I cant find the services in the updated system",
+                " I cant find the attached files on the dashboard",
+                " Am I able to see some of the cases captured"
+            ],
+            "responses": [
+                "To Search for a child just use the search bar appearing on all pages in the system at the top just input the child name and click enter."
+            ]
+        },
+        {
+            "tag": "recurringcases",
+            "patterns": [
+                "What is the need for recurring cases",
+                "How do I handles recurring cases"
+            ],
+            "responses": [
+                " Recurrent cases allow admission but new CRS has to be created and old admission must be discharged.",
+                "For recurring cases the first page you need to click the CRS filled for the admission being done"
+            ]
+        },
+        {
+            "tag": "genderissues",
+            "patterns": [
+                "How comes boys are have cases of pregnancy",
+                "How do I handles recurring cases"
+            ],
+            "responses": [
+                " We are conducting checks on the quality of data entered into CPIMS.",
+                "We have filtered out cases of boys with child pregnancy cases for the current FY.",
+                "Please fix the issue by editing the details of the case for the affected offices"
+            ]
+        },
+        {
+            "tag": "usermanual",
+            "patterns": [
+                "Where can i get the CPIMS user manual guide",
+                "How can I access the audio of the CPIMS user manual guide"
+            ],
+            "responses": [
+                "We are conducting checks on the quality of data entered into CPIMS.",
+                "We have filtered out cases of boys with child pregnancy cases for the current FY.",
+                "Please fix the issue by editing the details of the case for the affected offices"
+            ]
+        },
+        {
+            "tag": "upda",
+            "patterns": [
+                "How comes boys are have cases of pregnancy",
+                "How do I handles recurring cases"
+            ],
+            "responses": [
+                " You can access the user manual guide from the learning portal learning.childprotection.go.ke."
+            ]
+        },
+        {
+            "tag": "createcpmisaccounts",
+            "patterns": [
+                "Please create CPIMS accounts for the children officers in the various sub countries",
+                "Dear SCCO please create accounts for all the new officers trained in CPIMS"
+            ],
+            "responses": [
+                " We trained the officers and they should be using able to create accounts using CPIMS.",
+                "please contact the administrator"
+            ]
+        },
+        {
+            "tag": "CPVs",
+            "patterns": [
+                "The CPVs are having challenges to login into the Vurugu mapper App. The App is asking for a PIN to log in. Some didn't register with the PIN but those who did even after keying in it are not accepting "
+            ],
+            "responses": [
+                " For the Vurugu  mapper  app. It could be the CPVs change password  to use the pin .So they must remember the pin.",
+                "please contact the administrator for further assistance"
+            ]
+        },
+        {
+            "tag": "UnlockingAccount",
+            "patterns": [
+                "Kindly someone to help in unlocking my account",
+                "Please unlock my account",
+                "please my account is locked I need assistance"
+            ],
+            "responses": [
+                "Contact your Supervisor or Admin for a reset, kindly indicate your username",
+                "Hello kindly clear history and caches of your browser Or use another recommended browser"
+            ]
+        },
+        {
+            "tag": "LiveSystem-access",
+            "patterns": ["I cant log in into the live system using the default password 1234",
+                "Having problems with login in the live system for the first time",
+                "Hello can I get assistance in the opening of the live system"
+            ],
+            "responses": ["First you start by login to the system.\n You put your username and password as 1234.Click log in. The system will prompt you to enter old password put old password as1234 and finally create a new password using a combination of at least 8 characters, capital letter, small letters and special characters ($,@,?,&)",
+                "It's either you are not created in the live system or\n the username you are using is wrong or you at one point before login and forgot your password therefore unable to access the system..."
+            ]
+        },
+        {
+            "tag": "LiveSystem",
+            "patterns": [
+                "How to join live system",
+                "How can I access live system",
+                "who are allowed to use live system",
+                "When will I be allowed to access live system"
+            ],
+            "responses": [
+                "Once you hit the target of the tests we agreed on the training meeting  we will register you on live."
+            ]
+        },
+        {
+            "tag": "MissMatchedRequest",
+            "patterns": [" "],
+            "responses": [
+                "I did not understand your question/query",
+                "Please re-ask your question in an elaborate way",
+                "I have limited data conserning your issue, kindly contact your supervisor/Admin",
+                "kindly elaborate on the key word while asking your question"
+            ]
+        }
+    ]
+}

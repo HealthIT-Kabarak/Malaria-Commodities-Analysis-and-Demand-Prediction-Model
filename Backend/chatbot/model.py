@@ -1,81 +1,97 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Sun Feb 12 12:21:53 2023
+Created on Thu Feb 22 09:13:43 2023
 
 @author: armsy326
 """
 
+#just a file for random tests
+import json
 import gensim
 from gensim import corpora
-from process import preprocess
-from chatbot.dataset import data,unknown_query_responses
 import random
+from dataset import unknown_query_responses
 
+with open('data.json') as f:
+    #loading from a file using json.load()
+    dataset = json.load(f)
 
-corpus  = []
+corpus = []
+corpus_index = []
+text_similarity = {}
 
-accurate_queries = {}
-threshold  = 0.5
+#have the data  as a list all of it
+def load_corpus():
+    i = 0
+    for data in dataset['intents']:
+        
+        for patterns in data['patterns']:
+            corpus.append(patterns)
+            corpus_index.append(i)
 
-def load_dataset():
-    corpus.clear()
-    for queries in data['questions']:
-        cleaned_queries = preprocess(queries)
-        corpus.append(cleaned_queries)
+        i = i+1
 
-load_dataset()
+def check_similarity(query):
+    #print("Here")
+    text_similarity.clear()
+    #create tokens for the query and the corpus
+    sent   = gensim.utils.simple_preprocess(query)
 
-###use simple preprocess
+    corpus_token = [gensim.utils.simple_preprocess(doc)for doc in corpus]
 
-def process(sentence):
-    accurate_queries.clear()
-    cleaned_question = preprocess(sentence)
-    sentence = gensim.utils.simple_preprocess(cleaned_question)
-    token_corpus   =[gensim.utils.simple_preprocess(doc) for doc in corpus]
+    #create a dictionary
 
-    ##create a dictionary #take corpus as an argument
+    dictionary = corpora.Dictionary(corpus_token)
 
-    dictionary = corpora.Dictionary(token_corpus)
+    #create bow from all
 
-    #convert to bow
+    sent_bow  = dictionary.doc2bow(sent)
 
-    sent_bow  = dictionary.doc2bow(sentence)
-    corpus_bow = [dictionary.doc2bow(doc) for doc in token_corpus]
+    corpus_bow  = [dictionary.doc2bow(doc) for doc in corpus_token]
 
+    #create a tfidf instance
 
-    #convert to tf-idf
-
-    tfidf = gensim.models.TfidfModel(corpus_bow, dictionary=dictionary)
+    tfidf  = gensim.models.TfidfModel(corpus_bow, dictionary=dictionary)
 
     sent_tfidf = tfidf[sent_bow]
 
     corpus_tfidf  = tfidf[corpus_bow]
 
-    ##check similarity 
 
-    similarity  = [gensim.matutils.cossim(sent_tfidf, doc) for doc in corpus_tfidf]
+    #check similarity 
 
-#filtered_sent  = [doc for sim,doc in zip(similarity, corpus) if sim >= 0.5]
+    similarity = [gensim.matutils.cossim(sent_tfidf, doc) for doc in corpus_tfidf]
+    threshold  = 0.6
+    for sim,index  in zip(similarity, corpus_index):
 
-    for sim,doc in zip(similarity, corpus):
-        if sim >= threshold:
-            accurate_queries[doc] = sim
-    #sorting the dictionaries
-    if len(accurate_queries) > 1:
-        sorted_queries = sorted(accurate_queries.items(), key=lambda x: x[1], reverse=True)
+        if sim > threshold:
+            text_similarity[sim] = index
+
+
+def get_feedback():
+    
+    #process_corpus()
+    if len(text_similarity) == 0:
+        feedback = random.choices(unknown_query_responses)
+        return feedback[0]
         
-        key_index  = corpus.index(sorted_queries[0][0])
-        
-        return data['answers'][key_index]
-        
-    elif len(accurate_queries) == 1: 
-        key = list(accurate_queries.keys())[0]
+    elif len(text_similarity) > 1:
+        #sort it , with highest similarity coming first
+        sort = sorted(text_similarity.items(), key=lambda x: x[1], reverse=True)
 
-        key_index  = corpus.index(key)
-        
-        return data['answers'][key_index]
+        index = sort[0][1]
 
+        intent_responses = dataset['intents'][index]['responses']
+
+        response = random.choice(intent_responses)
+
+        return response
     else:
-        feedback = random.choice(unknown_query_responses)
-        return feedback
+        index = list(text_similarity.values())[0]
+        intent_responses = dataset['intents'][index]['responses']
+
+        response = random.choice(intent_responses)
+
+        return response
+

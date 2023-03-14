@@ -77,6 +77,13 @@ flutter:
     - assets/avatar.png
     - assets/avatar1.jpeg
     - assets/bot.jpeg
+    - assets/ana.jpeg
+    - assets/analysis.jpg
+    - assets/bot1.jpg
+    - assets/bot2.jpg
+    - assets/databot.jpg
+    - assets/wall.jpeg
+    - assets/wall2.jpeg
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

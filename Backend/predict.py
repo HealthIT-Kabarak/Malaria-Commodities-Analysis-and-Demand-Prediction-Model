@@ -18,7 +18,7 @@ commodities_data = [4898535.0, 4896284.0, 4162071.5, 5930233.0, 6156400.0]
 years = [2018, 2019, 2020, 2021, 2022]
 
 def predict_for_years(n):
-    print(n)
+   
     try:
         # Reshape the years data to fit the required input format for the LinearRegression model
         X = np.array(years).reshape(-1, 1)

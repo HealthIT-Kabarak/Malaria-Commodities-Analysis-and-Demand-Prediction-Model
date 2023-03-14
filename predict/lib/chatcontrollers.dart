@@ -24,12 +24,12 @@ class ChatController extends GetxController {
       status = "Server is Down.";
       update();
     });
-    /*socket.onConnectError((data) {
+    socket.onConnectError((data) {
       //print(data);
-      status = "Connection Error";
+      status = "KHIS Server is Down.";
 
       update();
-    });*/
+    });
     socket.on('message', (data) {
       //DateTime now = DateTime.now();
 

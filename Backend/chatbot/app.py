@@ -1,10 +1,9 @@
 import random
 from flask import Flask,request
 from flask_socketio import SocketIO,emit,send
-from chatbot.model import load_dataset, process
-from chatbot.dataset import salutations, salutation_feedback,salutations1, salutation_feedback1,malaria_commands
-from decode import data,predict,total,allocation
-
+from model import load_corpus, check_similarity,get_feedback
+from dataset import salutations, salutation_feedback,salutations1, salutation_feedback1
+import time
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = "MEHNTHISSHITSUCKS"
@@ -19,10 +18,9 @@ users  = {}
 #on connect function
 @socketio.on('connect')
 def on_connect(socket):
-    load_dataset()
+    load_corpus()
     #print("Connected")
     pass
-
 
 #saves the users who have connected by saving username and session_id in the user's dictionary
 @socketio.on('connection')
@@ -35,6 +33,7 @@ def save_session(payload):
     try:
         
         users[username]  = sesssion_id
+        #payload = {"message" : "I'm CPIMS user friendly chatbot, currently I'm currently offline for active development.I'll be back soon."}
         
         #emit("initialResponse",  payload, room=sesssion_id)
     
@@ -45,50 +44,33 @@ def save_session(payload):
 #works on user messages, taking them in, processing and replying them in real time
 @socketio.on('message')
 def message(payload):
+    starttime = time.perf_counter()
     #take in user message, and username
     user_message = payload['message']
-    
-    message = user_message.lower().strip()
     user_name  = payload['username']
     if user_message.lower().strip() in salutations:
         random_salutation = random.choice(salutation_feedback)
         emit("message", {"message": random_salutation}, room=users[user_name])
-    elif user_message == 'Why a chatbot':
-        emit("message",{"message" :"A chatbot can be used in data analysis to provide quick access to insights and trends, answer questions about data, and guide users through data visualization and exploration, improving efficiency and enabling better decision-making."}, room=users[user_name])
-    elif user_message == 'commands':
-        emit("message", {"message": "some of my commands for you to find the insight of data are: \n 'predict for (enter_no_of_years) years', 'data shape' to get shape, 'data column' to get columns and many more." }, room=users[user_name])
+
     elif user_message.lower().strip() in salutations1:
         random_salutation = random.choice(salutation_feedback1)
         emit("message", {"message": random_salutation}, room=users[user_name])
-        
-    elif message[:12] in malaria_commands:
-        emit("message", {"message": "I'm sorry but the model to get distribution of values is not working."}, room=users[user_name])
-    elif message[:10] in malaria_commands:
-        feedback = allocation(message)
-        emit("message", {"message": feedback}, room=users[user_name])
-    elif message[:5] in malaria_commands:
-        feedback = total(message)
-        
-        emit("message", {"message": feedback}, room=users[user_name])
-    elif message[:7] in malaria_commands:
-        feedback = predict(message)
-        emit("message", {"message": feedback}, room=users[user_name])
-
-    elif message[:4] in malaria_commands:
-        feedback = data(message)
-        emit("message", {"message": feedback}, room=users[user_name])
 
     else:
         try:
-            feedback  = process(user_message)
-
-            #print(feedback)
+            check_similarity(user_message)
+            feedback = get_feedback()
 
             emit("message", {"message": feedback}, room=users[user_name])
 
         except Exception as e:
             if e.__class__.__name__ == 'KeyError':
                 pass
+            else:
+                print(e)
+    endtime = time.perf_counter()
+    elapsed_time = endtime - starttime
+    print(f"{elapsed_time:.6f}")
     
 
 #takes note of users who have been disconnected.....a bit useless here

@@ -41,7 +41,7 @@ class _ChatPageState extends State<ChatPage> {
         backgroundColor: Colors.black,
         title: Column(
           children: [
-            const Text("Malaria Commodity Dispersion Explainer",
+            const Text("Predictive Analysis Bot",
                 style: TextStyle(color: Colors.white)),
             Align(
               alignment: Alignment.center,
@@ -76,9 +76,9 @@ class _ChatPageState extends State<ChatPage> {
                                   decoration: const BoxDecoration(
                                       color: Colors.amber,
                                       image: DecorationImage(
-                                          fit: BoxFit.fitWidth,
+                                          fit: BoxFit.fill,
                                           image: AssetImage(
-                                            "assets/bot.jpeg",
+                                            "assets/bot2.jpg",
                                           )),
                                       borderRadius: BorderRadius.all(
                                           Radius.circular(20))),
@@ -98,9 +98,8 @@ class _ChatPageState extends State<ChatPage> {
                                       width: 220,
                                       child: AnimatedTextKit(
                                         animatedTexts: [
-                                          // "Hi! I'm a chatbot for the child protection management system. I can help you report and track cases, answer basic questions and guide you through the process. Let's work together to keep children safe!"
                                           TyperAnimatedText(
-                                              "Hi! I'm a chatbot, still in active development.I can give you a clear picture of trends related to consumption of malaria commodities,dissect the dataset and make limitied prediction.")
+                                              "Hi! I'm a predictive analysis chatbot, still in active development.I can give you a clear picture of trends related to consumption of malaria commodities,dissect the dataset and make limitied predictions.")
                                         ],
                                       ),
                                     ),
@@ -294,7 +293,8 @@ class _ChatPageState extends State<ChatPage> {
                             ),
                             GetBuilder<ChatController>(builder: (_) {
                               return Text(
-                                chatController.status ?? "Linking with khis...",
+                                chatController.status ??
+                                    "Linking with khis server...",
                                 style: const TextStyle(
                                     fontSize: 10, color: Colors.white),
                               );
@@ -324,7 +324,7 @@ class _ChatPageState extends State<ChatPage> {
                                                 fontSize: 14,
                                                 color: Colors.grey.shade700),
                                             hintText:
-                                                "KHIS analysis explainer.",
+                                                "What do you want to know about the malaria data?.",
                                             border: InputBorder.none,
                                             filled: true,
                                             fillColor: Colors.grey.shade100,
