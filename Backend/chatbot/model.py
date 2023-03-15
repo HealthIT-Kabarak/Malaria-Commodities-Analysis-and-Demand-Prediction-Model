@@ -66,7 +66,7 @@ def check_similarity(query):
     for sim,index  in zip(similarity, corpus_index):
 
         if sim > threshold:
-            print(sim)
+            
             text_similarity[sim] = index
 
 

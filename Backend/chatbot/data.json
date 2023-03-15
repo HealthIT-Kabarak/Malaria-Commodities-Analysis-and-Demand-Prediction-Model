@@ -89,9 +89,9 @@
                 "support me please"
             ],
             "responses": [
-                "Tell me how can I assist you",
-                "Tell me your problem to assist you",
-                "Yes Sure, How can I support you"
+                "Tell me how can I assist you, basically it should be about the KHIS data",
+                "Tell me your problem to assist you.",
+                "Yes Sure, How can I support you?"
             ]
         },
         {
@@ -116,192 +116,33 @@
 
      
         {
-            "tag": "Admission",
+            "tag": "About Prediction",
             "patterns": [
-                "will we then be submitting monthly/quarterly or annually?"
+                "How do you predict?",
+                "What algorithm have you used for prediction?",
+                "what have you used for prediction?"
             ],
             "responses": [
-                "It will be needless since the guys at Headquarters can filter that at their end anytime they need that data."
+                "Hey, I used Prophet for prediction! It's a time series forecasting tool developed by Facebook. All you need to do is input your data, select parameters, and Prophet will generate predictions with uncertainty intervals. Super easy!",
+                "I used Prophet for prediction - it's a Facebook tool for time series forecasting. Just input data, select parameters, and Prophet generates predictions with uncertainty intervals. Simple and efficient!",
+                "I used Prophet, a Facebook tool, for time-series prediction. Just input data, select parameters and Prophet generates predictions with uncertainty intervals."
+              
             ]
         },
         {
-            "tag": "SelfDischarge",
-            "patterns": ["is there self discharge",
-                "what is self discharge"
+            "tag": "Prophet Shortcomings",
+            "patterns": [
+                "Prophet shortcomings",
+                "what are prophet disadvantages?",
+                "prophet algorithm problems",
+                "prophet disadvantage",
+                "some prophet disadvantages"
             ],
-            "responses": ["Self-discharge not right"]
+            "responses": [
+               "1. Prophet assumes predictable trend and seasonality, limiting its use for short-term predictions and unstable patterns.\n\n2.Outliers and missing data can affect Prophet's trend and seasonal patterns, leading to inaccurate predictions.\n\n3.Prophet has limited support for multi-step forecasting and uncertainty intervals may not account for all sources of uncertainty.\n\n4.Implementing Prophet effectively can require significant computational resources and expertise, with users needing to tune the model parameters."
+            ]
 
-        },
-      
-        {
-            "tag": "ChildSearch",
-            "patterns": [
-                "How do I search for a child in the system",
-                "How do I find child details in the system",
-                "Please guide on how to search for a child"
-            ],
-            "responses": [
-                "To Search for a child just use the search bar appearing on all pages at the top put child name and click enter.",
-                "Placement search results to indcate the status (active, discharged, escaped or abducted)"
-            ]
-        },
-        {
-            "tag": "ChildTransfer",
-            "patterns": [
-                "What happens when you transfer children to another institutions",
-                "Can you transfer a child to other institutions",
-                "Am unable to transfer a girl from reception to rehab is it transfer in or re-admission",
-                "how do I know the transfer is successful",
-                "Can a child be transferred from a Remand directly to a Rehabilitation without passing through a reception center?"
-            ],
-            "responses": [
-                "When you transfer a child to another institution the users in the other SI will be notified.",
-                "For children transfer please contact the administrator",
-                "You will know a child has been transferred when doing institutional placement"
-            ]
-        },
-        {
-            "tag": "AddStaffTeacher",
-            "patterns": [
-                "when creating work force where do we place teachers",
-                "The system doesn't recognize teachers"
-            ],
-            "responses": [
-                "On person registry pleas add teacher on test site",
-                "You can add teachers as technical instructors"
-            ]
-        },
-        {
-            "tag": "ChildDischarge",
-            "patterns": [
-                "when I discharge some children from institution some disappear from pending cases",
-                "What type of discharge when the subject is committed to prison or remand",
-                "The system doesn't recognize teachers"
-            ],
-            "responses": [
-                "For a case to 'disappear from pending' as you put it, you must have provided at least one service by managing encounters.\n If you don't manage any encounter but you manage a service, referral or court session, it still remains pending. So, there is a great chance that in some cases you have not managed an encounter hence them remaining as pending.",
-                "It should be added as one of the options. It exists and children are always committed for short sharp sentences."
-            ]
-        },
-
-        {
-            "tag": "PopulationUpdate",
-            "patterns": [
-                "found out that these children were deleted from the system instead of being discharged. I would like to know why?",
-                "The record in the website seems to have been deleted, please advise",
-                "Could you please assist, am following on a record and it says the record does not exist in the database"
-            ],
-            "responses": [
-                "This should be a mistake and it is highly regretful",
-                "we are doing a follow up, we will get back to you",
-                "Seems they were delated by mistake, so activating them will enable easy exit from exit"
-            ]
-        },
-        {
-            "tag": "ManageAdministrativetasks",
-            "patterns": [
-                "How can i generate a unique serial number for my region that will be different from other regions",
-                "kindly send the reporting tools for my region",
-                "How do I copy the formulas? ",
-                "Are we supposed to continue in the same workbook?",
-                " How should we send the excel tool A",
-                "We have noted that the majority of the offices submitted the monthly caseloads using the old version of Tool A."
-            ],
-            "responses": [
-                "Tool A should still be the same as it is continuous",
-                "For tool B the last worksheet is on dictionary (defining counties)",
-                "You should have separate tools for each sub county that you serve.",
-                "The reporting Tools are being worked on. We request that we continue populating the Tool A ",
-                "The new Tool A has a column for Date of Birth."
-            ]
-        },
-       
-        {
-            "tag": "usermanual",
-            "patterns": [
-                "Where can i get the CPIMS user manual guide",
-                "How can I access the audio of the CPIMS user manual guide"
-            ],
-            "responses": [
-                "We are conducting checks on the quality of data entered into CPIMS.",
-                "We have filtered out cases of boys with child pregnancy cases for the current FY.",
-                "Please fix the issue by editing the details of the case for the affected offices"
-            ]
-        },
-        {
-            "tag": "upda",
-            "patterns": [
-                "How comes boys are have cases of pregnancy",
-                "How do I handles recurring cases"
-            ],
-            "responses": [
-                " You can access the user manual guide from the learning portal learning.childprotection.go.ke."
-            ]
-        },
-        {
-            "tag": "createcpmisaccounts",
-            "patterns": [
-                "Please create CPIMS accounts for the children officers in the various sub countries",
-                "Dear SCCO please create accounts for all the new officers trained in CPIMS"
-            ],
-            "responses": [
-                " We trained the officers and they should be using able to create accounts using CPIMS.",
-                "please contact the administrator"
-            ]
-        },
-        {
-            "tag": "CPVs",
-            "patterns": [
-                "The CPVs are having challenges to login into the Vurugu mapper App. The App is asking for a PIN to log in. Some didn't register with the PIN but those who did even after keying in it are not accepting "
-            ],
-            "responses": [
-                " For the Vurugu  mapper  app. It could be the CPVs change password  to use the pin .So they must remember the pin.",
-                "please contact the administrator for further assistance"
-            ]
-        },
-        {
-            "tag": "UnlockingAccount",
-            "patterns": [
-                "Kindly someone to help in unlocking my account",
-                "Please unlock my account",
-                "please my account is locked I need assistance"
-            ],
-            "responses": [
-                "Contact your Supervisor or Admin for a reset, kindly indicate your username",
-                "Hello kindly clear history and caches of your browser Or use another recommended browser"
-            ]
-        },
-        {
-            "tag": "LiveSystem-access",
-            "patterns": ["I cant log in into the live system using the default password 1234",
-                "Having problems with login in the live system for the first time",
-                "Hello can I get assistance in the opening of the live system"
-            ],
-            "responses": ["First you start by login to the system.\n You put your username and password as 1234.Click log in. The system will prompt you to enter old password put old password as1234 and finally create a new password using a combination of at least 8 characters, capital letter, small letters and special characters ($,@,?,&)",
-                "It's either you are not created in the live system or\n the username you are using is wrong or you at one point before login and forgot your password therefore unable to access the system..."
-            ]
-        },
-        {
-            "tag": "LiveSystem",
-            "patterns": [
-                "How to join live system",
-                "How can I access live system",
-                "who are allowed to use live system",
-                "When will I be allowed to access live system"
-            ],
-            "responses": [
-                "Once you hit the target of the tests we agreed on the training meeting  we will register you on live."
-            ]
-        },
-        {
-            "tag": "MissMatchedRequest",
-            "patterns": [" "],
-            "responses": [
-                "I did not understand your question/query",
-                "Please re-ask your question in an elaborate way",
-                "I have limited data conserning your issue, kindly contact your supervisor/Admin",
-                "kindly elaborate on the key word while asking your question"
-            ]
         }
+      
     ]
 }
