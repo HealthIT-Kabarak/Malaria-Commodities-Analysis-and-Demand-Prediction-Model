@@ -24,7 +24,7 @@ class _ChatPageState extends State<ChatPage> {
   void initState() {
     super.initState();
     chatController.socket = IO.io(
-        'http://localhost:3000/',
+        'http://127.0.0.1:3000/',
         IO.OptionBuilder().setTransports(['websocket']).setQuery(
             {'username': "armsy"}).build());
     chatController.socketConnection();
@@ -113,6 +113,179 @@ class _ChatPageState extends State<ChatPage> {
                                   style: TextStyle(
                                       fontSize: 10,
                                       fontStyle: FontStyle.italic),
+                                ),
+                                const SizedBox(
+                                  height: 5,
+                                ),
+                                const Text("credits:",
+                                    style: TextStyle(
+                                        fontSize: 10,
+                                        fontStyle: FontStyle.italic)),
+                                Container(
+                                  height: 150,
+                                  width: 240,
+                                  decoration: const BoxDecoration(
+                                      color: Colors.transparent,
+                                      borderRadius: BorderRadius.all(
+                                          Radius.circular(10))),
+                                  child: Column(
+                                    children: [
+                                      Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceAround,
+                                        children: const [
+                                          Text("Fakii Mohammed(team lead)",
+                                              style: TextStyle(
+                                                  fontSize: 10,
+                                                  fontStyle: FontStyle.italic)),
+                                          Text("Armstrong Nyagwencha",
+                                              style: TextStyle(
+                                                  fontSize: 10,
+                                                  fontStyle: FontStyle.italic)),
+                                        ],
+                                      ),
+                                      Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceAround,
+                                        children: const [
+                                          Text("Theophilus Owiti",
+                                              style: TextStyle(
+                                                  fontSize: 10,
+                                                  fontStyle: FontStyle.italic)),
+                                          Text("Pleasant View",
+                                              style: TextStyle(
+                                                  fontSize: 10,
+                                                  fontStyle: FontStyle.italic)),
+                                        ],
+                                      ),
+                                      Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceAround,
+                                        children: const [
+                                          Text("Mburu Mercy)",
+                                              style: TextStyle(
+                                                  fontSize: 10,
+                                                  fontStyle: FontStyle.italic)),
+                                          Text("Teresa Chebet",
+                                              style: TextStyle(
+                                                  fontSize: 10,
+                                                  fontStyle: FontStyle.italic)),
+                                        ],
+                                      ),
+                                      Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceAround,
+                                        children: const [
+                                          Text("Ian Kiprotich",
+                                              style: TextStyle(
+                                                  fontSize: 10,
+                                                  fontStyle: FontStyle.italic)),
+                                          Text("Yorke Nyakundi",
+                                              style: TextStyle(
+                                                  fontSize: 10,
+                                                  fontStyle: FontStyle.italic)),
+                                        ],
+                                      ),
+                                      Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceAround,
+                                        children: const [
+                                          Text("Ian Kiprotich",
+                                              style: TextStyle(
+                                                  fontSize: 10,
+                                                  fontStyle: FontStyle.italic)),
+                                          Text("Yorke Nyakundi",
+                                              style: TextStyle(
+                                                  fontSize: 10,
+                                                  fontStyle: FontStyle.italic)),
+                                        ],
+                                      ),
+                                      Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceAround,
+                                        children: const [
+                                          Text("Precious Kiptoon",
+                                              style: TextStyle(
+                                                  fontSize: 10,
+                                                  fontStyle: FontStyle.italic)),
+                                          Text("Vincent Kipkirui",
+                                              style: TextStyle(
+                                                  fontSize: 10,
+                                                  fontStyle: FontStyle.italic)),
+                                        ],
+                                      ),
+                                      Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceAround,
+                                        children: const [
+                                          Text("George Karani",
+                                              style: TextStyle(
+                                                  fontSize: 10,
+                                                  fontStyle: FontStyle.italic)),
+                                          Text("Emmanuel Koech",
+                                              style: TextStyle(
+                                                  fontSize: 10,
+                                                  fontStyle: FontStyle.italic)),
+                                        ],
+                                      ),
+                                      Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceAround,
+                                        children: const [
+                                          Text("Kiprono Shadrack",
+                                              style: TextStyle(
+                                                  fontSize: 10,
+                                                  fontStyle: FontStyle.italic)),
+                                          Text("Ryan Munene",
+                                              style: TextStyle(
+                                                  fontSize: 10,
+                                                  fontStyle: FontStyle.italic)),
+                                        ],
+                                      ),
+                                      Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceAround,
+                                        children: const [
+                                          Text("George Mboni",
+                                              style: TextStyle(
+                                                  fontSize: 10,
+                                                  fontStyle: FontStyle.italic)),
+                                          Text("Edwin Wachira",
+                                              style: TextStyle(
+                                                  fontSize: 10,
+                                                  fontStyle: FontStyle.italic)),
+                                        ],
+                                      ),
+                                      Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceAround,
+                                        children: const [
+                                          Text("Emmanuel Momanyi",
+                                              style: TextStyle(
+                                                  fontSize: 10,
+                                                  fontStyle: FontStyle.italic)),
+                                          Text("Peter Rogendo",
+                                              style: TextStyle(
+                                                  fontSize: 10,
+                                                  fontStyle: FontStyle.italic)),
+                                        ],
+                                      ),
+                                      Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceAround,
+                                        children: const [
+                                          Text("Gitungo Rose",
+                                              style: TextStyle(
+                                                  fontSize: 10,
+                                                  fontStyle: FontStyle.italic)),
+                                          Text(" ",
+                                              style: TextStyle(
+                                                  fontSize: 10,
+                                                  fontStyle: FontStyle.italic)),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
                                 ),
                               ],
                             ),

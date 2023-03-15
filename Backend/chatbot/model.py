@@ -62,10 +62,11 @@ def check_similarity(query):
     #check similarity 
 
     similarity = [gensim.matutils.cossim(sent_tfidf, doc) for doc in corpus_tfidf]
-    threshold  = 0.6
+    threshold  = 0.7
     for sim,index  in zip(similarity, corpus_index):
 
         if sim > threshold:
+            print(sim)
             text_similarity[sim] = index
 
 
