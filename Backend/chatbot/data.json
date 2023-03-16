@@ -114,7 +114,6 @@
             ]
         },
 
-     
         {
             "tag": "About Prediction",
             "patterns": [
@@ -142,6 +141,34 @@
                "1. Prophet assumes predictable trend and seasonality, limiting its use for short-term predictions and unstable patterns.\n\n2.Outliers and missing data can affect Prophet's trend and seasonal patterns, leading to inaccurate predictions.\n\n3.Prophet has limited support for multi-step forecasting and uncertainty intervals may not account for all sources of uncertainty.\n\n4.Implementing Prophet effectively can require significant computational resources and expertise, with users needing to tune the model parameters."
             ]
 
+        },
+        {
+            "tag": "Negative/error prediction outputs",
+            "patterns": [
+                "Why are there negative prediction output",
+                "Your prediction has negative output",
+                "I'm getting a negative prediction",
+                "I don't think your prediction is right",
+                "Your prediction is wrong"
+            ],
+            "responses": [
+            "I'm sorry but this can be caused by: \n Overfitting: Model captures noise instead of trend.\nOutliers: Unusual observations disrupt the trend and cause incorrect predictions. Remove outliers or use a robust model.\nIncorrect model specification: Incorrectly modeled seasonality or trend causes negative predictions.\nNegative inputs: Negative input data can cause negative predictions."
+              
+            ]
+        },
+        {
+            "tag": "rememdy for Negative/error prediction outputs",
+            "patterns": [
+                "correct negative prediction output",
+                "How to have correct predictions",
+                "Get rid of negative prediction",
+                "Increase accuracy",
+                "How to make the prediction accurate"
+            ],
+            "responses": [
+            "My developer should increase accuracy by: \n Adjust hyperparameters such as changepoints or regularization parameter.\nRemove outliers or use a robust model.\nUse appropriate model components and adjust hyperparameters.\nTransform data or use a different model."
+              
+            ]
         }
       
     ]
