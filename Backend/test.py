@@ -23,3 +23,21 @@ import os
     elif message[:4] in malaria_commands:
         feedback = data(message)
         emit("message", {"message": feedback}, room=users[user_name])"""
+
+
+
+"""from num2words import num2words
+
+# Most common usage.
+print(num2words(2023))
+
+print(num2words(2023, to = 'year'))
+
+
+
+from word2number import w2n
+
+year_str = "twenty twenty-three"
+result = w2n.word_to_num(year_str)
+
+print("The year is:", result)"""

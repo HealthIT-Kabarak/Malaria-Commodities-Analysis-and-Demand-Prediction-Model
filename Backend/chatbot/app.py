@@ -1,3 +1,4 @@
+import base64
 import random
 from flask import Flask,request
 from flask_socketio import SocketIO,emit,send
@@ -40,11 +41,24 @@ def save_session(payload):
     except Exception as e:
         if e.__class__.__name__  == 'KeyError':
             pass
+#sending an image or images 
+
+@socketio.on('visualization')
+def image():
+
+    with open('1.png', mode='rb') as f:
+        image_data  = f.read()
+
+    #encode the image data as base64
+    encoded_image = base64.b64encode(image_data)
+
+    #send the encode image through socketio
+    socketio.emit("visulization", {'image': encoded_image.decode('utf-8')})
 
 #works on user messages, taking them in, processing and replying them in real time
 @socketio.on('message')
 def message(payload):
-    starttime = time.perf_counter()
+    #starttime = time.perf_counter()
     #take in user message, and username
     user_message = payload['message']
     user_name  = payload['username']
@@ -68,9 +82,10 @@ def message(payload):
                 pass
             else:
                 print(e)
-    endtime = time.perf_counter()
+    """endtime = time.perf_counter()
     elapsed_time = endtime - starttime
-    print(f"{elapsed_time:.6f}")
+    print(f"{elapsed_time:.6f}")"""
+
     
 
 #takes note of users who have been disconnected.....a bit useless here
