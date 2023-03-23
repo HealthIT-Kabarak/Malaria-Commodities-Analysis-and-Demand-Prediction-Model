@@ -122,7 +122,7 @@
                 "what have you used for prediction?"
             ],
             "responses": [
-                "Hey, I used Prophet for prediction! It's a time series forecasting tool developed by Facebook. All you need to do is input your data, select parameters, and Prophet will generate predictions with uncertainty intervals. Super easy!",
+                "Hey, I use Prophet for prediction! It's a time series forecasting tool developed by Facebook. All you need to do is input your data, select parameters, and Prophet will generate predictions with uncertainty intervals. Super easy!",
                 "I used Prophet for prediction - it's a Facebook tool for time series forecasting. Just input data, select parameters, and Prophet generates predictions with uncertainty intervals. Simple and efficient!",
                 "I used Prophet, a Facebook tool, for time-series prediction. Just input data, select parameters and Prophet generates predictions with uncertainty intervals."
               

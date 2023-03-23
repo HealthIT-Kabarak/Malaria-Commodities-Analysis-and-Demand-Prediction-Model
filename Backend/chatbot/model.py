@@ -8,6 +8,7 @@ Created on Thu Feb 22 09:13:43 2023
 
 #just a file for random tests
 import json
+import itertools
 import gensim
 from gensim import corpora
 import random
@@ -16,6 +17,9 @@ from dataset import unknown_query_responses
 with open('data.json') as f:
     #loading from a file using json.load()
     dataset = json.load(f)
+with open('../county_prediction.json') as f:
+
+    prediction_dataset = json.load(f)
 
 corpus = []
 corpus_index = []
@@ -31,6 +35,9 @@ def load_corpus():
             corpus_index.append(i)
 
         i = i+1
+    for data in prediction_dataset:
+        corpus.append(data)
+
 
 def check_similarity(query):
     #print("Here")
@@ -63,36 +70,45 @@ def check_similarity(query):
 
     similarity = [gensim.matutils.cossim(sent_tfidf, doc) for doc in corpus_tfidf]
     threshold  = 0.7
-    for sim,index  in zip(similarity, corpus_index):
-
+    for sim,match,index in itertools.zip_longest(similarity,corpus,corpus_index):
+        
         if sim > threshold:
-            
-            text_similarity[sim] = index
+            if index is not None:
 
+                text_similarity[sim] = index
+            else:
 
+                text_similarity[sim] = match
+        
 def get_feedback():
     
-    #process_corpus()
     if len(text_similarity) == 0:
         feedback = random.choices(unknown_query_responses)
         return feedback[0]
-        
     elif len(text_similarity) > 1:
         #sort it , with highest similarity coming first
         sort = sorted(text_similarity.items(), key=lambda x: x[1], reverse=True)
 
         index = sort[0][1]
+        try:
+            intent_responses = dataset['intents'][index]['responses']
 
-        intent_responses = dataset['intents'][index]['responses']
+            response = random.choice(intent_responses)
 
-        response = random.choice(intent_responses)
+            return response
+        
+        except TypeError:
 
-        return response
+            return index
     else:
         index = list(text_similarity.values())[0]
-        intent_responses = dataset['intents'][index]['responses']
+        try:
+            intent_responses = dataset['intents'][index]['responses']
 
-        response = random.choice(intent_responses)
+            response = random.choice(intent_responses)
 
-        return response
+            return response
+        except:
+
+            return index
 

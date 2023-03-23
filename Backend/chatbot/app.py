@@ -82,10 +82,6 @@ def message(payload):
                 pass
             else:
                 print(e)
-    """endtime = time.perf_counter()
-    elapsed_time = endtime - starttime
-    print(f"{elapsed_time:.6f}")"""
-
     
 
 #takes note of users who have been disconnected.....a bit useless here

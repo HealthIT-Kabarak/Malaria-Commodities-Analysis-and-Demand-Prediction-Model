@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -9,6 +10,7 @@ class ChatController extends GetxController {
   DateTime now = DateTime.now();
   //establishing connection statuses and receiving restaraunt messages
   String? status;
+  List<int>? _imageBytes;
 
   socketConnection() {
     socket.onConnect((data) {
@@ -47,6 +49,16 @@ class ChatController extends GetxController {
       }
 
       update();
+    });
+
+    socket.on('visualization', (data) {
+      //decode the base64-encoded image data
+      String encodedImage = data['image'];
+
+      List<int> bytes = base64Decode(encodedImage);
+
+      //Display the image
+      _imageBytes = bytes;
     });
   }
 

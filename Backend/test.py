@@ -25,19 +25,23 @@ import os
         emit("message", {"message": feedback}, room=users[user_name])"""
 
 
+import itertools
 
-"""from num2words import num2words
+data   = [1,2,3,4,5,6,7,8,9,10,11,12]
 
-# Most common usage.
-print(num2words(2023))
-
-print(num2words(2023, to = 'year'))
+data2 = ["name", "army","worm","cooper","retard", "pry", "science","man", "protege", "forth"]
 
 
+data3 = ['gregory isaacs', 'bob marley', 'siddy ranks', 'israel vibration', 'ub40', 'lucky dube', 'bnny wailer']
 
-from word2number import w2n
 
-year_str = "twenty twenty-three"
-result = w2n.word_to_num(year_str)
+for n,k,v in itertools.zip_longest(data,data2,data3):
+    if v is not None:
+        print(n,k,v)
 
-print("The year is:", result)"""
+    else:
+
+        print(n,k,v)
+
+
+
