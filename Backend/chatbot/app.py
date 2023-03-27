@@ -7,7 +7,7 @@ from dataset import salutations, salutation_feedback,salutations1, salutation_fe
 import time
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = "MEHNTHISSHITSUCKS"
+app.config['SECRET_KEY'] = "Amazinganalysisbot"
 socketio = SocketIO(app, cors_allowed_origins='*')
 
 
@@ -20,7 +20,7 @@ users  = {}
 @socketio.on('connect')
 def on_connect(socket):
     load_corpus()
-    #print("Connected")
+    print("Connected")
     pass
 
 #saves the users who have connected by saving username and session_id in the user's dictionary
@@ -81,7 +81,7 @@ def message(payload):
             if e.__class__.__name__ == 'KeyError':
                 pass
             else:
-                print(e)
+                print("error")
     
 
 #takes note of users who have been disconnected.....a bit useless here

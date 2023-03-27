@@ -118,6 +118,7 @@
             "tag": "About Prediction",
             "patterns": [
                 "How do you predict?",
+                "which algorithm model do you use",
                 "What algorithm have you used for prediction?",
                 "what have you used for prediction?"
             ],

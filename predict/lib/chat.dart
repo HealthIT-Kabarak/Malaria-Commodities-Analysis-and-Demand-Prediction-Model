@@ -41,7 +41,7 @@ class _ChatPageState extends State<ChatPage> {
         backgroundColor: Colors.black,
         title: Column(
           children: [
-            const Text("Predictive Analysis Bot",
+            const Text("Predictive Analysis",
                 style: TextStyle(color: Colors.white)),
             Align(
               alignment: Alignment.center,

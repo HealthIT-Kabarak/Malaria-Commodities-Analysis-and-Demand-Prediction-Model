@@ -21,6 +21,11 @@ with open('../county_prediction.json') as f:
 
     prediction_dataset = json.load(f)
 
+with open('../dispatched_data.json') as f:
+
+    dispatched_dataset = json.load(f)
+    
+
 corpus = []
 corpus_index = []
 text_similarity = {}
@@ -36,6 +41,8 @@ def load_corpus():
 
         i = i+1
     for data in prediction_dataset:
+        corpus.append(data)
+    for data in dispatched_dataset:
         corpus.append(data)
 
 
